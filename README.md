@@ -92,9 +92,6 @@
 
 ### 🏦 SOFINCO · Groupe Crédit Agricole
 
-**Data Engineer / Data Analyst**
-
-
 **Missions principales :**
 
 * 🔄 Développement et maintenance de **pipelines de données**
