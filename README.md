@@ -125,7 +125,7 @@ J'aime également transformer une idée ou un modèle en véritable application 
 
 ---
 
-## 🎮 En dehors du code
+## 🎮 Hobbys
 
 * 🎮 Gaming
 * 🍳 Cuisine
