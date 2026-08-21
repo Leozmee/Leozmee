@@ -88,7 +88,7 @@
 
 ---
 
-## 💼 Expérience
+## Expérience
 
 ### 🏦 SOFINCO · Groupe Crédit Agricole
 
