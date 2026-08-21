@@ -115,7 +115,7 @@ J'aime également transformer une idée ou un modèle en véritable application 
 
 ---
 
-## 📜 Certifications
+## Certifications
 
 * ☁️ **Microsoft Azure Fundamentals — AZ-900**
 * 🤖 **Microsoft Azure AI Fundamentals — AI-900**
@@ -130,7 +130,7 @@ J'aime également transformer une idée ou un modèle en véritable application 
 
 ---
 
-## 📫 Contact
+## Contact
 
 - 💼 **LinkedIn** : [linkedin.com/in/leo-gallus](https://www.linkedin.com/in/leo-gallus/)
 - 📧 **Email** : [leogaallus@gmail.com](mailto:ton-adresse@email.com)
