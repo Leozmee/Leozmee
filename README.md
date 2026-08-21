@@ -2,7 +2,7 @@
   <img src="./assets/ai-data-animation.svg" alt="Animation AI & Data" width="100%" />
 </p>
 
-<h1 align="center">👋 Bonjour, moi c'est Léo</h1>
+<h1 align="center">Bonjour, moi c'est Léo</h1>
 
 <p align="center">
   <strong>Data Engineer · Data Analyst</strong>
