@@ -15,7 +15,7 @@
 
 ---
 
-## 🚀 À propos de moi
+## À propos de moi
 
 * Conception et maintenance de **pipelines de données** et de **datamarts**
 * Développement d'**APIs**, conteneurisation et pratiques **DevOps**
@@ -24,7 +24,7 @@
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 ### AI, LLMs & Orchestration · Specialty
 
@@ -129,6 +129,11 @@ J'aime également transformer une idée ou un modèle en véritable application 
 * ₿ Cryptomonnaies
 
 ---
+
+## 📫 Contact
+
+- 💼 **LinkedIn** : [linkedin.com/in/leo-gallus](https://www.linkedin.com/in/leo-gallus/)
+- 📧 **Email** : [leogaallus@gmail.com](mailto:ton-adresse@email.com)
 
 <p align="center">
   <strong>Data · AI · Engineering · Cloud</strong>
