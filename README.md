@@ -115,18 +115,18 @@ J'aime également transformer une idée ou un modèle en véritable application 
 
 ---
 
-## Certifications
-
-* ☁️ **Microsoft Azure Fundamentals — AZ-900**
-* 🤖 **Microsoft Azure AI Fundamentals — AI-900**
-
----
-
 ## 🎮 Hobbys
 
 * 🎮 Gaming
 * 🍳 Cuisine
 * ₿ Cryptomonnaies
+
+---
+
+## Certifications
+
+* ☁️ **Microsoft Azure Fundamentals — AZ-900**
+* 🤖 **Microsoft Azure AI Fundamentals — AI-900**
 
 ---
 
