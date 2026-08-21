@@ -5,7 +5,7 @@
 <h1 align="center">👋 Bonjour, moi c'est Léo</h1>
 
 <p align="center">
-  <strong>Data Engineer · Data Analyst · AI & Data Enthusiast</strong>
+  <strong>Data Engineer · Data Analyst</strong>
 </p>
 
 <p align="center">
