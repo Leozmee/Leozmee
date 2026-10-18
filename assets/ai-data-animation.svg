@@ -1,62 +1,5 @@
-<svg width="1200" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vagues de données, éclairs cyan et jaunes, planète bleu métallique façon bille en rotation avec anneau entièrement rose tournoyant">
-  <style>
-    @keyframes flashA {
-      0%, 47%   { opacity: 0; }
-      48.5%     { opacity: 1; }
-      50.5%     { opacity: 0.3; }
-      52.5%     { opacity: 1; }
-      54.5%     { opacity: 0.45; }
-      56%       { opacity: 0.85; }
-      60%, 100% { opacity: 0; }
-    }
-    @keyframes flashB {
-      0%, 26%   { opacity: 0; }
-      27.5%     { opacity: 1; }
-      29.5%     { opacity: 0.3; }
-      31%       { opacity: 0.95; }
-      34%, 100% { opacity: 0; }
-    }
-    .flash-a { opacity: 0; animation: flashA 7s linear infinite; }
-    .flash-b { opacity: 0; animation: flashB 9.5s linear infinite; animation-delay: 2.2s; }
-    .ambient-a { fill-opacity: 0.26; opacity: 0; animation: flashA 7s linear infinite; }
-    .ambient-b { fill-opacity: 0.19; opacity: 0; animation: flashB 9.5s linear infinite; animation-delay: 2.2s; }
-    @media (prefers-reduced-motion: reduce) {
-      .flash-a, .flash-b, .ambient-a, .ambient-b { animation: none; opacity: 0; }
-    }
-  </style>
-
+<svg width="1200" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planète bleu métallique façon bille en rotation avec anneau entièrement rose tournoyant">
   <defs>
-    <linearGradient id="silverFlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#7dd3fc" stop-opacity="0.95"/>
-      <stop offset="25%"  stop-color="#e0f2fe" stop-opacity="1"/>
-      <stop offset="50%"  stop-color="#94a3b8" stop-opacity="0.9"/>
-      <stop offset="75%"  stop-color="#bae6fd" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.95"/>
-    </linearGradient>
-
-    <linearGradient id="cyanMetal" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#06b6d4"/>
-      <stop offset="25%"  stop-color="#22d3ee"/>
-      <stop offset="50%"  stop-color="#67e8f9"/>
-      <stop offset="75%"  stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-
-    <linearGradient id="yellowBolt" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ffffff"/>
-      <stop offset="25%"  stop-color="#fffbeb"/>
-      <stop offset="50%"  stop-color="#fef08a"/>
-      <stop offset="80%"  stop-color="#fde047"/>
-      <stop offset="100%" stop-color="#facc15"/>
-    </linearGradient>
-
-    <radialGradient id="flashAmbient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#fef9c3" stop-opacity="0.45"/>
-      <stop offset="45%"  stop-color="#fde047" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#facc15" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- 🪐 Planète BILLE MÉTALLIQUE (légèrement plus foncée) -->
     <radialGradient id="saturnBody" cx="34%" cy="28%" r="85%">
       <stop offset="0%"   stop-color="#c8d5e6"/>
       <stop offset="20%"  stop-color="#5e7190"/>
@@ -78,7 +21,6 @@
       <stop offset="100%" stop-color="#172554" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- 💍 Anneau ROSE -->
     <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%"   stop-color="#fdf2f8" stop-opacity="0.95"/>
       <stop offset="45%"  stop-color="#f472b6" stop-opacity="0.9"/>
@@ -89,196 +31,11 @@
     <clipPath id="ringBackClip"><rect x="-45" y="-45" width="90" height="45"/></clipPath>
     <clipPath id="ringFrontClip"><rect x="-45" y="0" width="90" height="45"/></clipPath>
 
-    <filter id="sparkSoft" filterUnits="userSpaceOnUse" x="-80" y="-80" width="1360" height="360">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="silverGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2.8" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="cyanGlow" x="-150%" y="-150%" width="400%" height="400%">
-      <feGaussianBlur stdDeviation="8" result="blur1"/>
-      <feGaussianBlur stdDeviation="4" result="blur2"/>
-      <feMerge><feMergeNode in="blur1"/><feMergeNode in="blur2"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="yellowGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="4.5" result="blur"/>
-      <feComponentTransfer in="blur" result="softBlur">
-        <feFuncA type="linear" slope="0.75"/>
-      </feComponentTransfer>
-      <feMerge><feMergeNode in="softBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="ambientSoft" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
     <filter id="trailGlow" x="-100%" y="-100%" width="300%" height="300%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-
-  <!-- NAPPES AMBIANTES -->
-  <ellipse class="ambient-a" cx="600" cy="98" rx="620" ry="100" fill="url(#flashAmbient)" filter="url(#ambientSoft)"/>
-  <ellipse class="ambient-b" cx="620" cy="106" rx="540" ry="90" fill="url(#flashAmbient)" filter="url(#ambientSoft)"/>
-
-  <!-- VAGUES SINUSOÏDALES -->
-  <g stroke="url(#silverFlow)" fill="none" stroke-linecap="round" filter="url(#silverGlow)">
-    <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke-width="2.4" opacity="0.95">
-      <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke-width="1.7" opacity="0.8">
-      <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-10,110 C80,40 150,40 240,110 C330,180 400,180 490,110 C580,40 650,40 740,110 C830,180 900,180 990,110 C1080,40 1150,40 1240,110" stroke-width="1.4" opacity="0.7">
-      <animate attributeName="d" values="M-10,110 C80,40 150,40 240,110 C330,180 400,180 490,110 C580,40 650,40 740,110 C830,180 900,180 990,110 C1080,40 1150,40 1240,110;M-10,110 C80,180 150,180 240,110 C330,40 400,40 490,110 C580,180 650,180 740,110 C830,40 900,40 990,110 C1080,180 1150,180 1240,110;M-10,110 C80,40 150,40 240,110 C330,180 400,180 490,110 C580,40 650,40 740,110 C830,180 900,180 990,110 C1080,40 1150,40 1240,110" dur="13s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-25,102 C65,162 145,162 235,102 C325,42 405,42 495,102 C585,162 665,162 755,102 C845,42 925,42 1015,102 C1105,162 1185,162 1225,102" stroke-width="1.1" opacity="0.55">
-      <animate attributeName="d" values="M-25,102 C65,162 145,162 235,102 C325,42 405,42 495,102 C585,162 665,162 755,102 C845,42 925,42 1015,102 C1105,162 1185,162 1225,102;M-25,102 C65,42 145,42 235,102 C325,162 405,162 495,102 C585,42 665,42 755,102 C845,162 925,162 1015,102 C1105,42 1185,42 1225,102;M-25,102 C65,162 145,162 235,102 C325,42 405,42 495,102 C585,162 665,162 755,102 C845,42 925,42 1015,102 C1105,162 1185,162 1225,102" dur="8.5s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ÉCLAIRS CYAN -->
-  <g filter="url(#cyanGlow)">
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;0;1;0.3;0.8;0.2;0;0;0" keyTimes="0;0.70;0.80;0.82;0.85;0.88;0.92;0.95;0.98;1" dur="3.5s" repeatCount="indefinite"/>
-      <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke="url(#cyanMetal)" stroke-width="5" fill="none" stroke-linecap="round">
-        <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-      </path>
-      <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke="#ffffff" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.95">
-        <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-      </path>
-    </g>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;0;1;0.4;0.9;0.3;0;0;0" keyTimes="0;0.65;0.78;0.80;0.83;0.86;0.90;0.94;0.97;1" dur="4s" repeatCount="indefinite"/>
-      <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke="url(#cyanMetal)" stroke-width="4.5" fill="none" stroke-linecap="round">
-        <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-      </path>
-      <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.95">
-        <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-      </path>
-    </g>
-  </g>
-
-  <!-- ÉCLAIR JAUNE PRINCIPAL — chargement gauche→droite -->
-  <g class="flash-a" filter="url(#yellowGlow)">
-    <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke="url(#yellowBolt)" stroke-width="5.6" fill="none" stroke-linecap="round" stroke-dasharray="1700 1700" stroke-dashoffset="1700">
-      <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="1700;1700;0;0" keyTimes="0;0.47;0.54;1" dur="7s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.95" stroke-dasharray="1700 1700" stroke-dashoffset="1700">
-      <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="1700;1700;0;0" keyTimes="0;0.47;0.54;1" dur="7s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" stroke="#fffbeb" stroke-width="3.4" fill="none" stroke-linecap="round" opacity="0.95" stroke-dasharray="30 1700" stroke-dashoffset="-40">
-      <animate attributeName="d" values="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100;M-20,100 C70,180 140,180 230,100 C320,20 390,20 480,100 C570,180 640,180 730,100 C820,20 890,20 980,100 C1070,180 1140,180 1230,100;M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="-40;-40;1700;1700" keyTimes="0;0.47;0.54;1" dur="7s" repeatCount="indefinite"/>
-    </path>
-
-    <g fill="#fde047" filter="url(#sparkSoft)">
-      <circle cx="230" cy="100" r="1.2" opacity="0">
-        <animate attributeName="opacity" values="0;0.8;0.6;0" keyTimes="0;0.15;0.5;1" dur="3.0s" begin="0s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 8 -18; 20 -40; 30 -60" dur="3.0s" begin="0s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="1.2;1.8;2.0;1.4" dur="3.0s" begin="0s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="480" cy="100" r="0.9" opacity="0">
-        <animate attributeName="opacity" values="0;0.7;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.5s" begin="0.6s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; -6 -14; -18 -36; -26 -56" dur="3.5s" begin="0.6s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.9;1.5;1.7;1.1" dur="3.5s" begin="0.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="730" cy="100" r="1.0" opacity="0">
-        <animate attributeName="opacity" values="0;0.75;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 6 -12; 16 -34; 28 -54" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="1.0;1.6;1.8;1.2" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="980" cy="100" r="0.8" opacity="0">
-        <animate attributeName="opacity" values="0;0.8;0.6;0" keyTimes="0;0.15;0.5;1" dur="3.8s" begin="0.3s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; -5 -16; -16 -38; -24 -58" dur="3.8s" begin="0.3s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.8;1.4;1.6;1.0" dur="3.8s" begin="0.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="355" cy="100" r="0.9" opacity="0">
-        <animate attributeName="opacity" values="0;0.7;0.4;0" keyTimes="0;0.15;0.5;1" dur="4.0s" begin="0.9s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 7 -14; 18 -36; 26 -56" dur="4.0s" begin="0.9s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.9;1.5;1.7;1.1" dur="4.0s" begin="0.9s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="855" cy="100" r="0.7" opacity="0">
-        <animate attributeName="opacity" values="0;0.75;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.4s" begin="1.5s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; -4 -10; -14 -30; -22 -50" dur="3.4s" begin="1.5s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.7;1.3;1.5;0.9" dur="3.4s" begin="1.5s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- SECOND ÉCLAIR JAUNE -->
-  <g class="flash-b" filter="url(#yellowGlow)">
-    <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke="url(#yellowBolt)" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-dasharray="1700 1700" stroke-dashoffset="1700">
-      <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="1700;1700;0;0" keyTimes="0;0.26;0.32;1" dur="9.5s" begin="2.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.9" stroke-dasharray="1700 1700" stroke-dashoffset="1700">
-      <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="1700;1700;0;0" keyTimes="0;0.26;0.32;1" dur="9.5s" begin="2.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" stroke="#fffbeb" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.95" stroke-dasharray="26 1700" stroke-dashoffset="-40">
-      <animate attributeName="d" values="M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92;M-30,92 C60,17 130,17 220,92 C310,167 380,167 470,92 C560,17 630,17 720,92 C810,167 880,167 970,92 C1060,17 1130,167 1220,92;M-30,92 C60,167 130,167 220,92 C310,17 380,17 470,92 C560,167 630,167 720,92 C810,17 880,17 970,92 C1060,167 1130,167 1220,92" dur="9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="-40;-40;1700;1700" keyTimes="0;0.26;0.32;1" dur="9.5s" begin="2.2s" repeatCount="indefinite"/>
-    </path>
-
-    <g fill="#fde047" filter="url(#sparkSoft)">
-      <circle cx="220" cy="92" r="0.9" opacity="0">
-        <animate attributeName="opacity" values="0;0.7;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; -6 -14; -16 -36; -26 -56" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.9;1.5;1.7;1.1" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="470" cy="92" r="1.0" opacity="0">
-        <animate attributeName="opacity" values="0;0.75;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.6s" begin="0.8s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 6 -12; 18 -34; 28 -54" dur="3.6s" begin="0.8s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="1.0;1.6;1.8;1.2" dur="3.6s" begin="0.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="720" cy="92" r="0.8" opacity="0">
-        <animate attributeName="opacity" values="0;0.7;0.4;0" keyTimes="0;0.15;0.5;1" dur="3.0s" begin="1.4s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; -5 -14; -14 -34; -22 -52" dur="3.0s" begin="1.4s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.8;1.4;1.6;1.0" dur="3.0s" begin="1.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="970" cy="92" r="0.7" opacity="0">
-        <animate attributeName="opacity" values="0;0.7;0.5;0" keyTimes="0;0.15;0.5;1" dur="3.8s" begin="0.5s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 4 -10; 14 -30; 22 -50" dur="3.8s" begin="0.5s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="0.7;1.3;1.5;0.9" dur="3.8s" begin="0.5s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- TRAÎNÉE CYAN -->
-  <g fill="#67e8f9" filter="url(#trailGlow)">
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;0;0;0;0;1;0.7;0.3;0;0;0;0;0;0;0;0;0" keyTimes="0;0.05;0.10;0.15;0.20;0.30;0.35;0.40;0.45;0.50;0.60;0.70;0.80;0.85;0.90;0.95;0.98;1" dur="12s" repeatCount="indefinite"/>
-      <circle r="2.5">
-        <animateMotion dur="4s" repeatCount="indefinite" path="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100"/>
-      </circle>
-      <circle r="2">
-        <animateMotion dur="4.5s" repeatCount="indefinite" begin="0.3s" path="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100"/>
-      </circle>
-      <circle r="3">
-        <animateMotion dur="3.8s" repeatCount="indefinite" begin="0.6s" path="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100"/>
-      </circle>
-      <circle r="1.8">
-        <animateMotion dur="5s" repeatCount="indefinite" begin="0.9s" path="M-20,100 C70,20 140,20 230,100 C320,180 390,180 480,100 C570,20 640,20 730,100 C820,180 890,180 980,100 C1070,20 1140,20 1230,100"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- PARTICULES DE FOND -->
-  <g fill="#e0f2fe">
-    <circle r="1.4" opacity="0.9">
-      <animateMotion dur="14s" repeatCount="indefinite" path="M100,70 C350,30 550,140 800,55 C1000,20 1150,110 1200,70"/>
-    </circle>
-    <circle r="1.1" opacity="0.7">
-      <animateMotion dur="18s" repeatCount="indefinite" path="M80,130 C300,175 560,60 800,140 C1000,180 1150,70 1200,120"/>
-    </circle>
-    <circle r="1.6" opacity="0.8">
-      <animateMotion dur="12s" repeatCount="indefinite" path="M150,50 C400,20 620,140 880,60 C1050,25 1150,120 1220,80"/>
-    </circle>
-  </g>
 
   <!-- 🪐 SATURNE BILLE MÉTALLIQUE + ANNEAU ROSE TOURNOYANT -->
   <g id="saturne">
@@ -291,7 +48,7 @@
     <g>
       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/>
 
-      <!-- 💍 Moitié ARRIÈRE de l'anneau rose tournoyant (atténuée) -->
+      <!-- 💍 Moitié ARRIÈRE de l'anneau rose tournoyant -->
       <g transform="rotate(-16)" opacity="0.6">
         <g clip-path="url(#ringBackClip)">
           <ellipse rx="30" ry="10" fill="none" stroke="url(#ringGrad)" stroke-width="5.6">
@@ -304,25 +61,21 @@
             <animate attributeName="ry" values="7;5.6;7;8.2;7" dur="3.4s" repeatCount="indefinite"/>
           </ellipse>
 
-          <!-- 🌸 VAGUE ROSE 1 -->
           <ellipse rx="30" ry="10" fill="none" stroke="#fdf2f8" stroke-width="2.4" stroke-linecap="round"
                     stroke-dasharray="34 33" stroke-dashoffset="0" opacity="0.35" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="-134" dur="3.2s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- 🌸 VAGUE ROSE 2 -->
           <ellipse rx="30" ry="10" fill="none" stroke="#f9a8d4" stroke-width="3" stroke-linecap="round"
                     stroke-dasharray="17 16.5" stroke-dashoffset="0" opacity="0.4" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="-134" dur="5s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- 🌸 VAGUE ROSE 3 — sens inverse -->
           <ellipse rx="30" ry="10" fill="none" stroke="#fbcfe8" stroke-width="1.4" stroke-linecap="round"
                     stroke-dasharray="13.4 13.4" stroke-dashoffset="0" opacity="0.3" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="134" dur="4.2s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- Étincelles blanches du tour -->
           <ellipse rx="30" ry="10" fill="none" stroke="#ffffff" stroke-width="1.3" opacity="0.75"
                     stroke-dasharray="6.7 6.7" stroke-linecap="round">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
@@ -331,7 +84,7 @@
         </g>
       </g>
 
-      <!-- Globe — marbre acier-navy (assombri) -->
+      <!-- Globe -->
       <circle r="15" fill="url(#saturnBody)"/>
       <g clip-path="url(#planetClip)">
         <ellipse cy="-8.8" rx="15.6" ry="1.9" fill="#3e5173" opacity="0.42"/>
@@ -392,25 +145,21 @@
             <animate attributeName="ry" values="7;5.6;7;8.2;7" dur="3.4s" repeatCount="indefinite"/>
           </ellipse>
 
-          <!-- 🌸 VAGUE ROSE 1 -->
           <ellipse rx="30" ry="10" fill="none" stroke="#fdf2f8" stroke-width="2.4" stroke-linecap="round"
                     stroke-dasharray="34 33" stroke-dashoffset="0" opacity="0.35" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="-134" dur="3.2s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- 🌸 VAGUE ROSE 2 -->
           <ellipse rx="30" ry="10" fill="none" stroke="#f9a8d4" stroke-width="3" stroke-linecap="round"
                     stroke-dasharray="17 16.5" stroke-dashoffset="0" opacity="0.4" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="-134" dur="5s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- 🌸 VAGUE ROSE 3 — sens inverse -->
           <ellipse rx="30" ry="10" fill="none" stroke="#fbcfe8" stroke-width="1.4" stroke-linecap="round"
                     stroke-dasharray="13.4 13.4" stroke-dashoffset="0" opacity="0.3" filter="url(#trailGlow)">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
             <animate attributeName="stroke-dashoffset" from="0" to="134" dur="4.2s" repeatCount="indefinite"/>
           </ellipse>
-          <!-- Étincelles blanches du tour -->
           <ellipse rx="30" ry="10" fill="none" stroke="#ffffff" stroke-width="1.3" opacity="0.75"
                     stroke-dasharray="6.7 6.7" stroke-linecap="round">
             <animate attributeName="ry" values="10;8;10;11.8;10" dur="3.4s" repeatCount="indefinite"/>
@@ -420,7 +169,7 @@
       </g>
     </g>
 
-    <!-- ✨ Reflets MÉTALLIQUES FIXES (hors rotation) -->
+    <!-- ✨ Reflets MÉTALLIQUES FIXES -->
     <g clip-path="url(#planetClip)">
       <circle r="15" fill="url(#rimGrad)"/>
       <ellipse cx="-4.5" cy="-6" rx="5.2" ry="3.2" fill="#e8f1ff" opacity="0.5" transform="rotate(-28 -4.5 -6)"/>
@@ -428,7 +177,7 @@
       <ellipse cx="3" cy="8" rx="2.8" ry="1.3" fill="#f9a8d4" opacity="0.22" transform="rotate(-20 3 8)"/>
     </g>
 
-    <!-- ✨ Étoiles : scintillement naturel -->
+    <!-- ✨ Étoiles -->
     <path d="M22,-19 l1.6,4 4,1.6 -4,1.6 -1.6,4 -1.6,-4 -4,-1.6 4,-1.6 z" fill="#f0f9ff" opacity="0">
       <animate attributeName="opacity"
         values="0;0;0.55;0.15;0.7;0.2;0.6;0.1;0.45;0;0"
